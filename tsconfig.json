@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "Node16",
+        "target": "ES2019",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node16",
+        "outDir": "./dis",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
