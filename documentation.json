@@ -8,7 +8,7 @@
   "servers": [
     {
       "url": "http://localhost:3000",
-      "description": "real API"
+      "description": "real Api"
     }
   ],
   "tags": [
@@ -375,21 +375,13 @@
         ]
       }
     },
-    "/reservation/{userId}": {
+    "/reservation": {
       "post": {
         "tags": [
           "Reservation"
         ],
         "summary": "Create a new reservation for a user",
         "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          },
           {
             "name": "Authorization",
             "in": "header",
@@ -435,52 +427,53 @@
             "bearerAuth": []
           }
         ]
-      }
-    },
-    "/reservation": {
-      "get": {
-        "tags": [
-          "Reservation"
-        ],
-        "summary": "List all reservations",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+      },
+   
+
+    "get": {
+      "tags": [
+        "Reservation"
+      ],
+      "summary": "List all reservations",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "type": "string"
           }
+        }
         ],
-        "responses": {
-          "200": {
-            "description": "Successfully retrieved reservations",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ReservationResponse"
-                  }
+      "responses": {
+        "200": {
+          "description": "Successfully retrieved reservations",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ReservationResponse"
                 }
               }
             }
-          },
-          "401": {
-            "description": "Access token is missing"
-          },
-          "500": {
-            "description": "Internal server error"
           }
         },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
+        "401": {
+          "description": "Access token is missing"
+        },
+        "500": {
+          "description": "Internal server error"
+        }
+      },
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ]
+    }
+  },
+
     "/reservation/{reservationId}": {
       "delete": {
         "tags": [

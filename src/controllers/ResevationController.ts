@@ -6,10 +6,10 @@ export default class ReservationController {
 
     async createReservation(req: Request, res: Response, next: NextFunction) {
         try {
-            const {id} = req.params;
+            const userId = req.user?.userId
             const {booksId} = req.body;
     
-            const reservation = await this.repository.createReservation(Number(id), booksId);
+            const reservation = await this.repository.createReservation(Number(userId), booksId);
     
             return res.status(201).json(reservation);
         } catch(err) {

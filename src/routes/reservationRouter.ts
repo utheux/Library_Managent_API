@@ -15,7 +15,7 @@ const checkAdmin: RequestHandler = (req, res, next) => {checkAdminMiddleware(req
 
 const router = express.Router();
 
-router.post("/:id", middlewareAuth, checkAdmin, (req: Request, res: Response, next: NextFunction) => {reservationController.createReservation(req, res, next)});
+router.post("/", middlewareAuth, (req: Request, res: Response, next: NextFunction) => {reservationController.createReservation(req, res, next)});
 router.get("/", middlewareAuth, checkAdmin, (req: Request, res: Response, next: NextFunction) => {reservationController.listReservations(req, res, next)});
 router.delete("/:id", middlewareAuth, checkAdmin, (req: Request, res: Response, next: NextFunction) => {reservationController.deleteReservation(req, res, next)});
 
