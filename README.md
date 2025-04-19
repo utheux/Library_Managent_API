@@ -44,7 +44,21 @@ Esta é uma API RESTful para gerenciamento de uma biblioteca, desenvolvida com N
 - Yarn ou NPM
 
 ---
+## 🌐 Acesso
 
+- ✅ API rodando em: http://localhost:3000
+- 📚 Documentação Swagger: http://localhost:3000/docs
+
+---
+## 🔒 Autenticação
+- A API utiliza JWT para proteger as rotas privadas. Após o login, o token deve ser enviado no cabeçalho das requisições protegidas:
+---
+
+## 👨‍💻 Autor
+- Desenvolvido por Matheus Ribeiro Silva
+- 📬 E-mail: utheuz_ribeiro@hotmail.com
+
+---
 ## ⚙️ Instalação e Execução
 
 ```bash
