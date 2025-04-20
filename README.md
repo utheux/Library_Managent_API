@@ -41,7 +41,7 @@ Esta é uma API RESTful para gerenciamento de uma biblioteca, desenvolvida com N
 - Listar reservas
 - Deletar reserva
 
-> 🔐 Todas as funcionalidades (exceto criação de conta) exigem autenticação via login.
+> 🔐 Todas as funcionalidades (exceto criação de conta e listagem de livros) exigem autenticação via login.
 
 ---
 
