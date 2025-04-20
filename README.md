@@ -9,9 +9,16 @@ Esta é uma API RESTful para gerenciamento de uma biblioteca, desenvolvida com N
 - **Node.js**
 - **TypeScript**
 - **Express**
-- **SQLite**
 - **JWT (JSON Web Token)**
 - **TypeORM**
+
+---
+
+## 💾 Banco de Dados
+
+- **SQLite - uma base de dados SQL embutida**
+- **Diagrama Entidade-Relacionamento:**
+![Diagrama Entidade Relacionamento](docs/DataBaseLibraryManagent.jpeg)
 
 ---
 
